@@ -21,7 +21,7 @@ public class Placement : MonoBehaviour
         map = gameObject.GetComponent<GameHandler>();
     }
 
-    void SetAlly(Ally newAlly)
+    internal void SetAlly(Ally newAlly)
     {
         ally = newAlly;
 
@@ -40,13 +40,13 @@ public class Placement : MonoBehaviour
                 ally.Place();
             }
         }
-
+        /*
         if (Input.GetKeyDown(KeyCode.E))
         {
-            GameObject newAlly = Instantiate(Resources.Load<GameObject>("Allies/ally"));
+            GameObject newAlly = Instantiate(Resources.Load<GameObject>("Allies/Minim"));
             newAlly.transform.parent = map.transform.Find("Allies");
             ally = newAlly.GetComponent<Ally>();
-        }
+        }*/
 
         if (!ally) 
         {
